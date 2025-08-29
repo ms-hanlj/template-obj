@@ -22,6 +22,18 @@
         alert("Android users experiencing extreme camera zoom should go to browser setting, accessibility/webpage view, turn off force enable zoom/pinch to zoom in/out of webpages\n\nClick on X on the top right hand to partially hide background\n\nLet Ms Han know if you need help.");
       };
     </script>
+
+    <script>
+  function toggleModel() {
+    const model = document.getElementById("pentene-model");
+    if (model.getAttribute("visible") === "false") {
+      model.setAttribute("visible", "true");
+    } else {
+      model.setAttribute("visible", "false");
+    }
+  }
+</script>
+    
   </head>
 
   <body> 
@@ -31,6 +43,13 @@
     id="skybtn"
     onclick="skyCTRL()"
     >X</button>
+  </div>
+    <div id="modelbtn">
+    <button 
+    class="modelbtn" 
+    id="modelbtn"
+    onclick="toggleModel()"
+    >Show/Hide Model</button>
   </div>
     <a-scene
       arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
