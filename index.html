@@ -7,6 +7,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+  /* make sure both buttons float above the AR scene */
+  #skybtn, #modelbtn {
+    position: absolute;
+    top: 10px;         /* start at top */
+    right: 10px;       /* push to right */
+    z-index: 9999;     /* keep on top of AR scene */
+  }
+
+  #modelbtn {
+    top: 60px;         /* put below the sky button */
+  }
+
+  .skybtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+  }
+
+  .skybtn:hover {
+    background-color: #0056b3;
+  }
+</style>
     
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/jacksonkoh8/AR.js@99bda004452549e8a7576b9e7afc26992aa0104e/aframe/build/aframe-ar.js"></script>
@@ -35,7 +63,7 @@
     
   <div id="modelbtn">
     <button 
-    class="skybtn" 
+    class="modelbtn" 
     id="toggleModelbtn"
     onclick="toggleModel()"
   >Toggle Model</button>
