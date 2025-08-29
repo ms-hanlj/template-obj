@@ -143,11 +143,8 @@
     <script>
   function toggleModel() {
     const model = document.getElementById("pentene-model");
-    if (model.getAttribute("visible") === "false") {
-      model.setAttribute("visible", "true");
-    } else {
-      model.setAttribute("visible", "false");
-    }
+    const isVisible = model.getAttribute("visible");
+    model.setAttribute("visible", !isVisible);
   }
 </script>
     
